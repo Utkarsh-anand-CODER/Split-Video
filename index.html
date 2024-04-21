@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <div class="side" id="side1">
+            <video src="frefe.mp4" type="video/mp4" autoplay loop muted></video>
+        </div>
+        <div class="side" id="side2">
+            <video src="frefe.mp4" type="video/mp4" autoplay loop muted></video>
+
+        </div>
+    </section>
+    <div class="content">
+        <h2>
+            Split Video on Page Scroll
+        </h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptates laborum aliquam non consequatur,
+            blanditiis vero itaque laboriosam repellat error. Ipsam esse sit omnis! Pariatur, optio? Corrupti placeat
+            earum laudantium!
+        </p>
+    </div>
+    <script>
+        let side1 = document.getElementById('side1');
+        let side2 = document.getElementById('side2');
+
+        window.addEventListener('scroll', function () {
+            side1.style.left = -window.pageYOffset + 'px';
+            side2.style.left = window.pageYOffset + 'px';
+        })
+    </script>
+</body>
+
+</html>
